@@ -5,9 +5,12 @@ vrem sa trimitem aceste informatii o data pe ora la un cont de telegram
 """
 # import the module
 import python_weather
+#pip install python-weather
 import asyncio
 import telegram
-from configs import token_telegram
+#pip install python - telegram - bot - -upgrade
+#from configs import token_telegram
+token_telegram = '6003491369:AAH2kovznvZqCNKWTlIzehnVzhFsDkkcqH8'
 from time import sleep
 import os
 
