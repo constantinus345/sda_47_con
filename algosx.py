@@ -27,3 +27,5 @@ start_2 = perf_counter()
 print(factorial_recursiv(n))
 performanta_recursiv = perf_counter() - start_2
 print(f"factorial_recursiv cu n = {n} a rulat in {performanta_recursiv} secunde")
+
+#factorial recursiv este totusi performant, vedeti diferenta gigantica in recurenta pentru fibonacci
