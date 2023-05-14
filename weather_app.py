@@ -8,11 +8,10 @@ import python_weather
 #pip install python-weather
 import asyncio
 import telegram
-#pip install python - telegram - bot - -upgrade
-#from configs import token_telegram
+#pip install python-telegram-bot - -upgrade
 token_telegram = '6003491369:AAH2kovznvZqCNKWTlIzehnVzhFsDkkcqH8'
-from time import sleep
-import os
+# from time import sleep
+# import os
 
 """i_1 = ia-mi datele de pe un site #astepte
 i_2 = print(1+3)
@@ -48,6 +47,9 @@ chat_id_con = 1307289323
 #programul va rula, apoi va astepta 60*60 secunde, adica ruleaza la fiecare ora.
 
 asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+#pentru MacOS comentati linia de mai sus
 asyncio.run(getweather(cityx = "Bucharest ", idt= chat_id_con))
+
+#pentru uninstall, folositi pip uninstall nume_librarie
 
 
