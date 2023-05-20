@@ -1,0 +1,11 @@
+Problema:
+Vrea sa descarc fisiere pdf dintr-o lista de linkuri ce contin documente scanate.
+Apoi sa trimita un mesaj telegram la identificarea unui text in acel link.
+
+1. Descarc fisierele intr-un folder
+2. Creat functie care imi returneaza full paths la fisierele de interes
+3. Creez o functie care imi extrage textul dintr-un document.
+- voi folosi tesseract pentru OCR (recunoasterea caracterelor dintr-o imagine)
+- https://stackoverflow.com/questions/46140485/tesseract-installation-in-windows (urmariti alte instructiuni, #google)
+4. Daca textul de interes a fost identificat, utilizatorul va primi un mesaj pe telegram de genul:
+text_telegram = "In documentul {doc} a fost identificat {text}"
