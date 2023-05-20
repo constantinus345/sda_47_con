@@ -8,7 +8,7 @@
 #
 # for key, value in dict_ordered.items():
 #     print(f"(dict_ordered) La cheia {key} avem valoarea = {value}")
-#
+
 # #construim un dictionar clasic
 # dict_unordered = dict()
 # dict_unordered['cheia_1'] = 11
@@ -46,7 +46,3 @@ print(elx, type(elx))
 
 elx.popleft()
 print(elx, type(elx))
-
-
-
-
