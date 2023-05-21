@@ -1,0 +1,20 @@
+https://developers.google.com/youtube/v3/quickstart/python
+
+Program to monitor a youtube page for new playlist -
+
+store the playlist name, link and description in json and xlsx.
+Use multithreading to deal with maximum 4 requests at a time. (optional, o sa va ajut)
+
+Announce users on telegram and/or email when a new playlist is published on their channel of interest -
+
+make a simple xlsx file with 2-5 users and 2-5 channels to follow. If you plan to update users on email - DONE
+
+write some emails of yours, if on telegram- write your telegram ids (find your id aici). And some random youtube channels are ok. 
+
+1. Creem un fisier de configurare in care sa avem toate datele de configurare pentru aplicatie. DONE
+2. Creem functiile de acces la youtube api si anume playlist DONE
+3. Creem fisierul cu clienti si functiile de citire a datelor din fisier DONE
+4. Functii de trimitere a mesajelor pe telegram 
+5. Stoca datele de playlist in xlsx si json
+6. Verificam playlisturile si trimitem mesaje daca sunt noi playlisturi
+7. Modificam codul ca sa faca multithreading
