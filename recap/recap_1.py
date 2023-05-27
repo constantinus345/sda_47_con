@@ -196,4 +196,111 @@ print(a)
 
 text_path = 'B:/Dropbox/SDA/Python_47/abc.txt' #path Unix
 #Pentru copierea rapida a path-urilor in Windows, de tip Unix, folosesc https://pathcopycopy.github.io/
-folder = r'B:\Dropbox\SDA\Python_47' #path windows, necesar r"", adica raw string
+folder = r'B:\Dropbox\nSDA\Python_47' #path windows, necesar r"", adica raw string
+
+
+folder_1 = r'B:\Dropbox\nSDA\Python_47' #r este raw string, nu interpreteaza caracterele speciale precum \n
+folder_2 = 'B:\Dropbox\nSDA\Python_47' #\n va fi interpretat ca newline
+print(folder_1)
+print(folder_2)
+
+
+text_path = 'B:/Dropbox/SDA/Python_47/abc.txt' #path Unix
+#pentru a citi dintr-un fisier txt>
+with open(text_path, 'r') as alias_fisier:
+    print(alias_fisier.read())
+#'r' inseamna read, operatiunea de citire din fisier
+
+ceva_text = '\nce mai faci?'
+with open(text_path, 'a') as f:
+    #'a' este operatiune de append, adauga la fiserul existent
+    f.write(ceva_text)
+
+ceva_text_nou = 'Hello lady'
+with open(text_path, 'w') as file:
+    #'w' este operatiune de scriere, DAR scrie din nou, adica sterge tot ce era in fisier si apoi scrie
+    file.write(ceva_text_nou)
+
+a, b = 5, 7 #declarare de variabile pe aceiasi linie, adica a = 5, b= 7
+str_f = f"Valorile sunt {a} si {b}"
+print(str_f)
+#alternativa la f-strings
+str_format = "Valorile sunt {} si {}".format(a,b)
+print(str_format)
+
+lisx = ["1", 2, 3.4, [5, [8,9], 6], (11, 12, 23)]
+print(f"Lista are {len(lisx)} elemente")
+print(lisx[3][1][0]) #8, accesarea elementelor din nested lists, liste in liste
+
+lisx.append(7)
+print(lisx)
+lisx.append([1,2,3]) #adauga lista ca singur element  ...7, [1, 2, 3]]
+print(lisx)
+lisx.extend([11,12,13]) #adauga fiecare element din lista ...7, [1, 2, 3], 11, 12, 13]
+print(lisx)
+
+lisx.insert(1, 'abc') #a inserat 'abc' la pozitia/indexul 1
+print(lisx) #['1', 'abc', 2, 3.4,...
+
+print(lisx[::-1]) #va printa lista in ordine inversa
+lisx.pop(2) #scoate elementul de la indexul 2
+print(lisx)
+
+lisx.remove(3.4) #elimina un element dupa valoarea sa, nu dupa index ca pop
+print(lisx)
+
+#pericol- argument default lista la functie
+def add_element_power_2(el, listx = []):
+    listx.append(el**2)
+    return listx
+
+print(add_element_power_2(3)) #expected [9], got [9]
+print(add_element_power_2(4)) #expected [16], got [9,16], unexpected behaviour
+
+def add_element_power_2_v2(el, listx = None):
+    if listx is None:
+        listx = []
+    listx.append(el**2)
+    return listx
+
+print(add_element_power_2_v2(3)) #expected [9], got as expected
+print(add_element_power_2_v2(4)) #expected [16], got as expected
+
+lisx = [1,2,3]
+lisx[1] = 19
+print(lisx)
+
+tupx = (1,2,3)
+tupx[1] = 19
+print(tupx) #tuple este immutable, metaforic - tuple este un fel de lista in beton
+#lista este mutable, putem sa schimbam valorile, pe cand la tuple -NU!
+
+#initializare tuple
+#incorect
+tupx = (1)
+print(tupx, type(tupx))
+
+#corect, cu un singur element
+tupx = (1,)
+print(tupx, type(tupx))
+
+#corect, fara nici un element
+tupx = tuple() #tupx = () nu este valid
+print(tupx, type(tupx))
+
+def puterile(a,b,c):
+    return a**2, b**3, c**4
+
+ax = puterile(3,4,5)
+print(ax, type(ax)) #functiile la return -> tuple
+
+#set
+#nu sunt ordonate, au elemente unice
+some_set = {16, 1,2,3,2,3,3,3,3,4,5,6,13, 7,2,3}
+print(some_set) #nu e garantat ca vor fi in o oarecare ordine, ex crescator
+
+lisx = [16, 1,2,3,2,3,3,3,3,4,5,6,13, 7,2,3, 198]
+print(lisx)
+print(set(lisx))
+
+
